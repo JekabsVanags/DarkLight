@@ -1,0 +1,302 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Monsters/Earthworm/Earthworm.gd" type="Script" id=1]
+[ext_resource path="res://Level1/Art/315-3157691_witcher-class-mod-attack-steel-sword-darkest-dungeon.png" type="Texture" id=2]
+[ext_resource path="res://Level1/Art/Untitled1.png" type="Texture" id=3]
+[ext_resource path="res://Level1/Art/something.png" type="Texture" id=4]
+[ext_resource path="res://Level1/Art/unnamed.png" type="Texture" id=5]
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 145.779, 42 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "AttackL"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.2, 0.2 ), Vector2( 0.25, 0.25 ), Vector2( 0.25, 0.25 ), Vector2( 0.2, 0.2 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -27, -42.9727 ), Vector2( -92, -42.973 ), Vector2( -103, -42.973 ), Vector2( -27, -42.9727 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D:enabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/Sprite:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.9, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.2, 0.199934 ), Vector2( 0.25, 0.25 ), Vector2( 0.25, 0.25 ), Vector2( 0.2, 0.199934 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -27, -42.9727 ), Vector2( 38, -42.9727 ), Vector2( 49, -42.9727 ), Vector2( -27, -42.9727 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D:enabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/Sprite:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.9, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.2, 0.2 ), Vector2( 0.2, 0.190323 ), Vector2( 0.2, 0.2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -27, -43 ), Vector2( -27, -39 ), Vector2( -27, -43 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2D:enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite/Sprite:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "AttackL"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "AttackR"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=12]
+states/AttackL/node = SubResource( 5 )
+states/AttackL/position = Vector2( 177, 43 )
+states/AttackR/node = SubResource( 6 )
+states/AttackR/position = Vector2( 177, 163 )
+states/Idle/node = SubResource( 7 )
+states/Idle/position = Vector2( 177, 102 )
+transitions = [ "Idle", "AttackL", SubResource( 8 ), "Idle", "AttackR", SubResource( 9 ), "AttackL", "Idle", SubResource( 10 ), "AttackR", "Idle", SubResource( 11 ) ]
+start_node = "Idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[node name="Earthworm" type="Node2D"]
+position = Vector2( -29, -11 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+
+[node name="HarmArea(damage)" type="Area2D" parent="."]
+position = Vector2( -0.784222, -0.270432 )
+rotation = 0.0194726
+scale = Vector2( 0.68121, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HarmArea(damage)"]
+position = Vector2( -39.4695, -34.2125 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -27, -42.7708 )
+scale = Vector2( 0.2, 0.199446 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 13, 15, 32, 35 )
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -35, 4.71701 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/AttackL = SubResource( 2 )
+anims/AttackR = SubResource( 3 )
+anims/Idle = SubResource( 4 )
+
+[node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
+tree_root = SubResource( 12 )
+anim_player = NodePath("..")
+active = true
+parameters/playback = SubResource( 13 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -34, -42 )
+rotation = 0.0194726
+scale = Vector2( 0.443419, 0.443419 )
+enabled = false
+texture = ExtResource( 5 )
+texture_scale = 0.5
+energy = 0.9
+range_layer_min = -1
+range_layer_max = 1
+
+[connection signal="body_entered" from="HarmArea(damage)" to="." method="_on_HarmAreadamage_body_entered"]

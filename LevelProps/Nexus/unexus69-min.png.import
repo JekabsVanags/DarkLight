@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/unexus69-min.png-88e32869ed94f2ac32d02ae1fe2513cb.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://LevelProps/Nexus/unexus69-min.png"
+dest_files=[ "res://.import/unexus69-min.png-88e32869ed94f2ac32d02ae1fe2513cb.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=true
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=true
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

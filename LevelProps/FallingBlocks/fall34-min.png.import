@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/fall34-min.png-2404cb2a4b2f5ba5b6b3e65e5b88ae67.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://LevelProps/FallingBlocks/fall34-min.png"
+dest_files=[ "res://.import/fall34-min.png-2404cb2a4b2f5ba5b6b3e65e5b88ae67.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

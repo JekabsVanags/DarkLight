@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=1]
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 900.0
+margin_top = 519.0
+margin_right = 991.0
+margin_bottom = 563.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Game" type="Button" parent="VBoxContainer"]
+margin_right = 91.0
+margin_bottom = 20.0
+text = "NEW GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Load Game" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 91.0
+margin_bottom = 44.0
+text = "LOAD GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 415.789
+margin_top = 271.579
+margin_right = 777.789
+margin_bottom = 384.579
+text = "COOL MENU TO BE ADDED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/New Game" to="." method="_on_New_Game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load Game" to="." method="_on_Load_Game_pressed"]

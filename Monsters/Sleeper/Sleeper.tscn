@@ -1,0 +1,276 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Monsters/Sleeper/sleeper-bloodlust.png" type="Texture" id=1]
+[ext_resource path="res://Monsters/Sleeper/sleeper-idle-1.png" type="Texture" id=2]
+[ext_resource path="res://Monsters/Sleeper/sleeper-shadow.png" type="Texture" id=3]
+[ext_resource path="res://Monsters/Sleeper/sleeper-idle-2.png" type="Texture" id=4]
+[ext_resource path="res://Monsters/Sleeper/sleeper-idle-3.png" type="Texture" id=5]
+[ext_resource path="res://Monsters/Earthworm/Earthworm.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 134.713, 31.3033 )
+
+[sub_resource type="ShaderMaterial" id=2]
+
+[sub_resource type="Animation" id=3]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1.03526 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 1.45, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.55 ), Vector2( 0.55, 0.55 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 1.4, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -6.5 ), Vector2( -30, -8.2 ), Vector2( -40, -8.2 ), Vector2( 0, -6.5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/Bloodlust:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.9, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/Bloodlust:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 37, -26.3 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "AttackR"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1.03526 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 1.45, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.55 ), Vector2( 0.55, 0.55 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 1.4, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -6.5 ), Vector2( 30, -8.2 ), Vector2( 40, -8.2 ), Vector2( 0, -6.5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/Bloodlust:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.9, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/Bloodlust:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -37, -26.3 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.859415, 1.4, 3.2, 3.9 ),
+"transitions": PoolRealArray( 0.840899, 1, 0.870553, 1, 0.840899 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.49, 0.49 ), Vector2( 0.5, 0.5 ), Vector2( 0.49, 0.49 ), Vector2( 0.5, 0.5 ), Vector2( 0.49, 0.49 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/Bloodlust:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0.4 ), Vector2( 0, 0 ), Vector2( 0, 0.4 ), Vector2( 0, 0 ), Vector2( 0, 0.4 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "AttackL"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "AttackR"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=13]
+states/AttackL/node = SubResource( 6 )
+states/AttackL/position = Vector2( 177, 43 )
+states/AttackR/node = SubResource( 7 )
+states/AttackR/position = Vector2( 177, 163 )
+states/Idle/node = SubResource( 8 )
+states/Idle/position = Vector2( 177, 102 )
+transitions = [ "Idle", "AttackL", SubResource( 9 ), "Idle", "AttackR", SubResource( 10 ), "AttackL", "Idle", SubResource( 11 ), "AttackR", "Idle", SubResource( 12 ) ]
+start_node = "Idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[node name="Sleeper" type="Node2D"]
+position = Vector2( 607.774, 460.473 )
+scale = Vector2( 2, 2 )
+z_index = 3
+script = ExtResource( 6 )
+
+[node name="HarmArea(damage)" type="Area2D" parent="."]
+rotation = 0.0194726
+scale = Vector2( 0.68121, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HarmArea(damage)"]
+rotation = -0.0139626
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 0, 0.289351 )
+scale = Vector2( 0.492766, 0.492766 )
+texture = ExtResource( 4 )
+region_rect = Rect2( 13, 15, 32, 35 )
+
+[node name="Bloodlust" type="Sprite" parent="Sprite"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -37, -26.3 )
+scale = Vector2( 1.2, 1.2 )
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/AttackL = SubResource( 3 )
+anims/AttackR = SubResource( 4 )
+anims/Idle = SubResource( 5 )
+
+[node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
+tree_root = SubResource( 13 )
+anim_player = NodePath("..")
+active = true
+parameters/playback = SubResource( 14 )
+[connection signal="body_entered" from="HarmArea(damage)" to="." method="_on_HarmAreadamage_body_entered"]

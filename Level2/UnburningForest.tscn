@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Menus/UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menus/Options.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Level1/Titles/Tiles.tres" type="TileSet" id=4]
+[ext_resource path="res://Level2/Level2.gd" type="Script" id=5]
+[ext_resource path="res://LevelProps/Nexus/Nexus1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Backgrounds/Level2/background.png" type="Texture" id=7]
+[ext_resource path="res://LevelProps/FallingBlocks/FallingBlocks.tscn" type="PackedScene" id=8]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="UI" parent="." instance=ExtResource( 1 )]
+
+[node name="AnimationTree" parent="UI/HP" index="12"]
+parameters/playback = SubResource( 1 )
+
+[node name="Options" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7268.55, 1739.89 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 100, 100 )
+format = 1
+tile_data = PoolIntArray( 131108, 0, 0, 196644, 0, 0, 262168, 0, 0, 262180, 0, 0, 327690, 0, 0, 327691, 0, 0, 327704, 0, 0, 327716, 0, 0, 327717, 0, 0, 327718, 0, 0, 393228, 0, 0, 393229, 0, 0, 393240, 0, 0, 393244, 0, 0, 393247, 0, 0, 393248, 0, 0, 393249, 0, 0, 393252, 0, 0, 393253, 0, 0, 393254, 0, 0, 458754, 0, 0, 458766, 0, 0, 458775, 0, 0, 458776, 0, 0, 458780, 0, 0, 458784, 0, 0, 458788, 0, 0, 458789, 0, 0, 458790, 0, 0, 458794, 0, 0, 458798, 0, 0, 458853, 0, 0, 524290, 0, 0, 524302, 0, 0, 524312, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524320, 0, 0, 524324, 0, 0, 524325, 0, 0, 524326, 0, 0, 524329, 0, 0, 524330, 0, 0, 524334, 0, 0, 589826, 0, 0, 589838, 0, 0, 589848, 0, 0, 589852, 0, 0, 589856, 0, 0, 589859, 0, 0, 589860, 0, 0, 589861, 0, 0, 589862, 0, 0, 589866, 0, 0, 589870, 0, 0, 589876, 0, 0, 655362, 0, 0, 655370, 0, 0, 655374, 0, 0, 655375, 0, 0, 655384, 0, 0, 655388, 0, 0, 655389, 0, 0, 655392, 0, 0, 655396, 0, 0, 655397, 0, 0, 655398, 0, 0, 655402, 0, 0, 655406, 0, 0, 655407, 0, 0, 655408, 0, 0, 655409, 0, 0, 655412, 0, 0, 655413, 0, 0, 655434, 0, 0, 720898, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720910, 0, 0, 720920, 0, 0, 720921, 0, 0, 720924, 0, 0, 720928, 0, 0, 720932, 0, 0, 720933, 0, 0, 720934, 0, 0, 720935, 0, 0, 720938, 0, 0, 720940, 0, 0, 720941, 0, 0, 720942, 0, 0, 720948, 0, 0, 720970, 0, 0, 786434, 0, 0, 786442, 0, 0, 786446, 0, 0, 786456, 0, 0, 786460, 0, 0, 786462, 0, 0, 786463, 0, 0, 786464, 0, 0, 786465, 0, 0, 786466, 0, 0, 786468, 0, 0, 786469, 0, 0, 786470, 0, 0, 786474, 0, 0, 786478, 0, 0, 786484, 0, 0, 786488, 0, 0, 786497, 0, 0, 786506, 0, 0, 851970, 0, 0, 851978, 0, 0, 851979, 0, 0, 851992, 0, 0, 851996, 0, 0, 851997, 0, 0, 851998, 0, 0, 852002, 0, 0, 852003, 0, 0, 852004, 0, 0, 852005, 0, 0, 852006, 0, 0, 852010, 0, 0, 852014, 0, 0, 852020, 0, 0, 852024, 0, 0, 852032, 0, 0, 852033, 0, 0, 852042, 0, 0, 917506, 0, 0, 917514, 0, 0, 917528, 0, 0, 917531, 0, 0, 917532, 0, 0, 917541, 0, 0, 917542, 0, 0, 917546, 0, 0, 917550, 0, 0, 917555, 0, 0, 917556, 0, 0, 917557, 0, 0, 917560, 0, 0, 917563, 0, 0, 917569, 0, 0, 917570, 0, 0, 917571, 0, 0, 917578, 0, 0, 983042, 0, 0, 983050, 0, 0, 983064, 0, 0, 983065, 0, 0, 983066, 0, 0, 983077, 0, 0, 983078, 0, 0, 983079, 0, 0, 983080, 0, 0, 983082, 0, 0, 983083, 0, 0, 983086, 0, 0, 983091, 0, 0, 983094, 0, 0, 983096, 0, 0, 983099, 0, 0, 983105, 0, 0, 983114, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048617, 0, 0, 1048618, 0, 0, 1048619, 0, 0, 1048622, 0, 0, 1048627, 0, 0, 1048631, 0, 0, 1048632, 0, 0, 1048635, 0, 0, 1048641, 0, 0, 1048650, 0, 0, 1114119, 0, 0, 1114156, 0, 0, 1114157, 0, 0, 1114158, 0, 0, 1114159, 0, 0, 1114160, 0, 0, 1114161, 0, 0, 1114162, 0, 0, 1114167, 0, 0, 1114168, 0, 0, 1114171, 0, 0, 1114177, 0, 0, 1114181, 0, 0, 1114186, 0, 0, 1179654, 0, 0, 1179703, 0, 0, 1179704, 0, 0, 1179705, 0, 0, 1179706, 0, 0, 1179707, 0, 0, 1179708, 0, 0, 1179713, 0, 0, 1179717, 0, 0, 1179722, 0, 0, 1245184, 0, 0, 1245189, 0, 0, 1245245, 0, 0, 1245246, 0, 0, 1245247, 0, 0, 1245248, 0, 0, 1245249, 0, 0, 1245250, 0, 0, 1245251, 0, 0, 1245252, 0, 0, 1245253, 0, 0, 1245254, 0, 0, 1245255, 0, 0, 1245256, 0, 0, 1245257, 0, 0, 1310721, 0, 0, 1310722, 0, 0, 1310723, 0, 0, 1310724, 0, 0, 1310725, 0, 0 )
+
+[node name="FallingBlocks" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 6800, 1500 )
+
+[node name="FallingBlocks2" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 6300, 1400 )
+
+[node name="FallingBlocks3" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 6200, 1400 )
+
+[node name="FallingBlocks5" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 2200, 800 )
+
+[node name="FallingBlocks4" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 2100, 800 )
+
+[node name="FallingBlocks6" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 2000, 800 )
+
+[node name="FallingBlocks9" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1800, 1100 )
+
+[node name="FallingBlocks8" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1700, 1100 )
+
+[node name="FallingBlocks7" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1600, 1100 )
+
+[node name="Nexus1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 7117.9, 1843.35 )
+
+[node name="Nexus2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3260.83, 540.911 )
+
+[node name="Nexus3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 243.948, 1941.61 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 0, 678 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1404, -44 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 22800, 4000 )
+
+[editable path="UI"]
